@@ -15,7 +15,9 @@
     "build": "react-scripts build",
     "serve": "node server.js",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build", // Build before deploying
+    "deploy": "gh-pages -d build" // Deploy the build directory
   },
   "browserslist": {
     "production": [
@@ -23,15 +25,11 @@
       "not dead",
       "not op_mini all"
     ],
-"homepage": "https://github.com/Gachagokimani/React-rental>",
-"scripts": {
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
-}'
-"development": [
+    "development": [
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "homepage": "https://gachagokimani.github.io/React-rental" // Ensure this is correct
 }
