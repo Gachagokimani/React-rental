@@ -1,0 +1,53 @@
+/* Container for the search page */
+.search-container {
+  position: relative; /* Allows absolute positioning of background */
+  min-block-size: 100vh; /* Minimum height for the container */
+  inline-size: 100%; /* Full width */
+  padding: 2rem; /* Padding around the container */
+}
+
+/* Background styling for the search page */
+.search-background {
+  position: absolute; /* Positioned absolutely within the container */
+  inset: 0; /* Fill the entire container */
+  background: linear-gradient(135deg, var(--lilac) 0%, var(--ripple-green) 100%); /* Gradient background */
+  opacity: 0.1; /* Slight transparency for background */
+  z-index: -1; /* Positioned behind other content */
+}
+
+/* Content area for search filters and title */
+.search-content {
+  max-inline-size: 1200px; /* Maximum width for content */
+  margin: 0 auto; /* Center content horizontally */
+}
+
+/* Flexbox layout for search filters */
+.search-filters {
+  display: flex; /* Use flexbox for layout */
+  gap: 1rem; /* Space between filters */
+  margin-block-start: 2rem; /* Space above filters */
+}
+
+/* Styles for input fields and select elements within search filters */
+.search-filters input,
+.search-filters select {
+  padding: 0.8rem; /* Padding inside input and select elements */
+  border: 1px solid #e0e0e0; /* Light border color */
+  border-radius: 5px; /* Rounded corners */
+  flex: 1; /* Allow inputs to grow and fill available space */
+}
+
+/* Responsive design adjustments for smaller screens */
+@media (max-width: 768px) {
+  .search-filters {
+    flex-direction: column; /* Stack filters vertically on smaller screens */
+    gap: 1rem; /* Space between stacked filters */
+  }
+  
+  .search-filters input,
+  .search-filters select {
+    width: 100%; /* Ensure full width on smaller screens */
+    padding: 0.6rem; /* Adjust padding for smaller screens if needed */
+    font-size: 1rem; /* Font size adjustment for better readability on mobile */
+  }
+}
