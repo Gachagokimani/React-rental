@@ -1,0 +1,60 @@
+/* Base styles for location cards */
+.location-card {
+  position: relative; /* Allows absolute positioning of child elements */
+  overflow: hidden; /* Ensures content does not overflow the card */
+  border-radius: 10px; /* Rounded corners for the card */
+  min-block-size: 200px; /* Minimum height for the card */
+  background-position: center; /* Center background image */
+  background-size: cover; /* Cover the entire area of the card */
+}
+
+/* Background images for different variants */
+.location-card.variant-1 {
+  background-image: url('image1.jpg'); /* Updated image path for variant 1 */
+}
+
+.location-card.variant-2 {
+  background-image: url('3bhome.jpg'); /* Updated image path for variant 2 */
+}
+
+/* Styles for the card body */
+.card-body {
+  padding: 1rem; /* Padding inside the card body */
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+}
+
+/* Title styles within the card */
+.card-title {
+  font-size: 1.25rem; /* Font size for title */
+  font-weight: bold; /* Bold font weight for title */
+  margin-block-end: 0.5rem; /* Space below the title */
+  color: var(--ripple-green); /* Title color using CSS variable */
+}
+
+/* Description text styles within the card */
+.card-text {
+  font-size: 1rem; /* Font size for description text */
+  margin-block-end: 1rem; /* Space below the description text */
+}
+
+/* Button styles for primary actions */
+.btn-primary {
+  background-color: var(--ripple-green); /* Button color using CSS variable */
+  border: none; /* No border on button */
+  color: white; /* White text color on button */
+  padding: 0.5rem 1rem; /* Padding inside button */
+  text-align: center; /* Center text in button */
+  text-decoration: none; /* No underline on button text */
+  display: inline-block; /* Display as inline block element */
+  font-size: 1rem; /* Font size for button text */
+  margin: 0.25rem 0; /* Margin around button */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 5px; /* Rounded corners for button */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for primary buttons */
+.btn-primary:hover {
+  background-color: var(--orange-tree); /* Change color on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
+}
