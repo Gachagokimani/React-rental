@@ -1,0 +1,39 @@
+.navbar {
+  background-color: var(--lilac); /* Use your app's primary color */
+  padding: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between; /* Space between title and links */
+  align-items: center; /* Center items vertically */
+}
+
+.navbar-title {
+  color: var(--ripple-green); /* Title color */
+  font-size: 1.5rem; /* Title font size */
+}
+
+.navbar-links {
+  list-style-type: none; /* Remove bullet points */
+  display: flex; /* Flexbox for horizontal layout */
+  gap: 2rem; /* Space between links */
+}
+
+.navbar-links li {
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.navbar-links a {
+  text-decoration: none; /* Remove underline from links */
+  color: white; /* Link color */
+}
+
+.navbar-links a:hover {
+  color: var(--orange-tree); /* Change link color on hover */
+}
+
+.navbar-links li:hover {
+  transform: translateY(-3px); /* Lift effect on hover */
+}
