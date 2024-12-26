@@ -1,0 +1,134 @@
+/* Container for the login page */
+.login-container {
+  position: relative; /* Allows absolute positioning of background */
+  inline-size: 100%; /* Full width */
+  min-block-size: 100vh; /* Minimum height for the container */
+  display: flex; /* Flexbox for centering content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  animation: fadeIn 0.8s ease-in-out; /* Fade-in animation */
+}
+
+/* Background styling for the login page */
+.login-background {
+  position: absolute; /* Positioned absolutely within the container */
+  inset-block-start: 0; /* Aligns to the top */
+  inset-inline-start: 0; /* Aligns to the left */
+  inline-size: 100%; /* Full width */
+  block-size: 100%; /* Full height */
+  z-index: -1; /* Positioned behind other content */
+  background-image: url('../../images/concept.jpg'); /* Updated image path for background */
+  background-repeat: no-repeat; /* Prevents repeating the background image */
+  background-position: bottom; /* Aligns background image at the bottom */
+  background-size: cover; /* Cover the entire area */
+  animation: slideUp 1s ease-out; /* Slide-up animation for background */
+}
+
+/* Wrapper for the login form */
+.login-form-wrapper {
+  background: rgba(255, 255, 255, 0.95); /* Semi-transparent white background */
+  padding: 2rem; /* Padding around form content */
+  border-radius: 10px; /* Rounded corners for form wrapper */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  transform: translateY(0); /* Initial transform state */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  animation: slideIn 0.6s ease-out; /* Slide-in animation for form wrapper */
+}
+
+/* Hover effect for the form wrapper */
+.login-form-wrapper:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Input field styles */
+.login-input {
+    inline-size:100%; 
+    padding:.8rem;
+    margin-block-end:1rem;
+    border:1px solid #e0e0e0;
+    border-radius:5px;
+    transition:border-color .3s ease,
+              box-shadow .3s ease; 
+}
+
+/* Focus styles for input fields */
+.login-input:focus {
+    outline:none; 
+    border-color:#0099ff;
+    box-shadow:
+        inset 
+        -1px 
+        -1px 
+        #0099ff,
+        inset 
+        -2px 
+        -2px 
+        rgba(255,
+           255,
+           255,
+           .5); 
+}
+
+/* Button styles for login action */
+.login-button {
+    inline-size:100%; 
+    padding:.8rem;
+    background:#0099ff;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    transition:.3s ease;
+}
+
+.login-button:hover {
+    background:#007acc; 
+    transform:translateY(-2px); 
+}
+
+.login-button:active {
+    transform:none;
+}
+
+/* Keyframes for animations */
+
+@keyframes fadeIn {
+    from { opacity:.5; }
+    to { opacity:1; }
+}
+
+@keyframes slideUp {
+    from { transform:translateY(20px); opacity:.5;}
+    to { transform:none;}
+}
+
+@keyframes slideIn {
+    from { transform:translateX(-20px); opacity:.5;}
+    to { transform:none;}
+}
+
+/* Responsive Design */
+
+@media (max-width:768px) {
+    .login-form-wrapper {
+        inline-size:90%; 
+        margin:.5rem;
+        padding:.8rem;
+    }
+    
+    .login-input {
+        padding:.6rem;
+    }
+    
+    .login-button {
+        padding:.6rem;
+    }
+}
+
+@media (max-width:480px) {
+    .login-form-wrapper {
+        inline-size:.95%;
+        padding:.5rem;
+    }
+}
