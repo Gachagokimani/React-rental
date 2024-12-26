@@ -1,6 +1,7 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import React, { Suspense, lazy } from 'react';
 
+// Lazy loading components
 const LandingPage = lazy(() => import('./components/LandingPage'));
 const LoginForm = lazy(() => import('./components/LoginForm'));
 const SearchHomes = lazy(() => import('./components/SearchHomes'));
@@ -21,4 +22,4 @@ function App() {
   );
 }
 
-export default App; 
+export default App;
